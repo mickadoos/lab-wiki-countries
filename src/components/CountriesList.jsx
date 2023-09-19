@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const CountriesList = ({ countries }) => {
+const CountriesList = ({ countries, flagURLProp }) => {
   return (
     <>
       <h2 className="text-center">Countries List</h2>
@@ -16,7 +16,7 @@ const CountriesList = ({ countries }) => {
               >
                 <p>{country.name.common}</p>
                 <img
-                  src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`}
+                  src={flagURLProp + `/${country.alpha2Code.toLowerCase()}.png`}
                   alt={`${country.name.common}`}
                 />
               </NavLink>
